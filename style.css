@@ -1,0 +1,344 @@
+/* --- CSS Variables and Global Styles --- */
+:root {
+    --primary-leaf-green: #2E7D32;
+    --secondary-warm-yellow: #FBC02D;
+    --background-off-white: #FAFAF6;
+    --text-dark-charcoal: #333333;
+    --accent-mint-green: #A5D6A7;
+    --card-background: #FFFFFF;
+    --white: #FFFFFF;
+    --shadow: 0 4px_12px rgba(0, 0, 0, 0.08);
+    --sans-serif: 'Helvetica Neue', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--sans-serif);
+    background-color: var(--background-off-white);
+    color: var(--text-dark-charcoal);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--primary-leaf-green);
+    margin-top: 0;
+    font-weight: 600;
+}
+
+h1 { font-size: 3rem; line-height: 1.2; }
+h2 { font-size: 2.25rem; text-align: center; margin-bottom: 40px; }
+h3 { font-size: 1.5rem; }
+
+section {
+    padding: 80px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-leaf-green);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-warm-yellow);
+    color: var(--text-dark-charcoal);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--card-background);
+    color: var(--primary-leaf-green);
+    border: 2px solid var(--primary-leaf-green);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-warm-yellow);
+    color: var(--text-dark-charcoal);
+    border-color: var(--secondary-warm-yellow);
+    transform: translateY(-2px);
+}
+
+
+/* --- Header & Navbar --- */
+header {
+    background-color: var(--card-background);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-leaf-green);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark-charcoal);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-leaf-green);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+/* --- Problem-Solution Section --- */
+.problem-solution-section {
+    background-color: var(--card-background);
+}
+.problem-solution-section .container {
+    display: flex;
+    gap: 40px;
+    text-align: center;
+}
+.problem, .solution {
+    flex: 1;
+    padding: 20px;
+}
+.problem h2, .solution h2 {
+    font-size: 1.75rem;
+}
+
+/* --- Meal Plans Section --- */
+.plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background-color: var(--card-background);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    text-align: center;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.plan-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.plan-card h3 {
+    margin: 20px 0 10px;
+}
+
+.plan-card p {
+    padding: 0 20px;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.plan-card .btn {
+    margin: 0 auto 25px;
+}
+
+/* --- Features Section --- */
+.features-section {
+    background-color: var(--accent-mint-green);
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
+}
+
+.feature {
+    flex: 1;
+    padding: 20px;
+}
+
+.feature-icon svg {
+    stroke: var(--primary-leaf-green);
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+/* --- CTA Section --- */
+.cta-section {
+    text-align: center;
+    background-color: var(--card-background);
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--text-dark-charcoal);
+    color: var(--background-off-white);
+    padding: 40px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer h3, footer p {
+    margin: 0 0 10px 0;
+    color: var(--white);
+}
+
+footer .btn-secondary {
+    background-color: transparent;
+    border-color: var(--white);
+    color: var(--white);
+}
+footer .btn-secondary:hover {
+    background-color: var(--secondary-warm-yellow);
+    border-color: var(--secondary-warm-yellow);
+    color: var(--text-dark-charcoal);
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 820px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        order: 2;
+    }
+
+    .hero-image {
+        order: 1;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .features-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        column-gap: 20px;
+    }
+
+    .problem-solution-section .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+}
